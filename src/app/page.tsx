@@ -34,9 +34,9 @@ export default function Home() {
       <Stars numOfStars={150} />
       <main className="min-h-screen flex flex-col justify-center items-center relative z-10">
         <HeaderIcons/>
-        <GradientTitle>
+        <GradientTitle className="text-center md:text-left">
           Transforming ideas into impactful
-          <br />digital experiences
+          <br className="hidden md:block" />digital experiences
         </GradientTitle>
         <FadeIn duration={2.5}>
           <GradientText className="mt-6">

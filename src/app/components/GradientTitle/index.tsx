@@ -71,6 +71,8 @@ export default function GradientTitle({
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
+                whiteSpace: "nowrap", // Prevent line breaks
+                fontSize: "1.5rem", // Adjust font size for smaller screens
               }}
             >
               {item === " " ? "\u00A0" : item}
