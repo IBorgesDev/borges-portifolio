@@ -8,10 +8,10 @@ interface HeadingProps {
   children: React.ReactNode;
 }
 
-export default function Heading({ 
-  level, 
-  className, 
-  children 
+export default function Heading({
+  level,
+  className,
+  children
 }: HeadingProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -26,8 +26,8 @@ export default function Heading({
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <Tag 
-        className={`text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#dbdbdb] ${className}`}
+      <Tag
+          className={`text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#dbdbdb] ${className}`}
       >
         {children}
       </Tag>

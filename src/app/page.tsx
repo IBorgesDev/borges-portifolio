@@ -18,6 +18,8 @@ import ContactForm from "./components/ContactForm";
 import { useState } from "react";
 import Modal from "./components/Modal";
 import ProjectCard from "./components/ProjectsSlider/ProjectCard";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import HeaderIcons from "./components/HeaderIcons";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -31,9 +33,10 @@ export default function Home() {
       <BloomBackground />
       <Stars numOfStars={150} />
       <main className="min-h-screen flex flex-col justify-center items-center relative z-10">
+        <HeaderIcons/>
         <GradientTitle>
-          Discover the true potential<br/>
-          of your idea.
+          Transforming ideas into impactful
+          <br />digital experiences
         </GradientTitle>
         <FadeIn duration={2.5}>
           <GradientText className="mt-6">
@@ -65,15 +68,15 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <Heading
               level={2}
-            >
-              Who said great software <br/>
-              has to cost a fortune?
+              className="leading-tight">
+              Crafting exceptional software <br/>
+              without breaking the piggy
             </Heading>
-            <Paragraph className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#A3A3A3] to-[#71717A]">
-              Great software doesn&apos;t have to be out of reach. Whether <br/>
-              you&apos;ve got a big idea or a small project, it can be brought to <br/>
-              life without all the stress. Let&apos;s make it happen, together, with <br/>
-              solutions that work for you.
+            <Paragraph className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#A3A3A3] to-[#71717A] leading-relaxed">
+              Quality software is within your reach. No matter the size of <br/>
+              your project, we can turn your vision into reality. Let&apos;s <br/>
+              collaborate to create solutions that meet your needs <br/>
+              and exceed your expectations.
             </Paragraph>
           </div>
           <DollarSigns />
