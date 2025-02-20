@@ -37,7 +37,7 @@ export default function HeaderIcons() {
         <FaGithub size={30} className="text-white hover:text-gray-400 transition-colors duration-200" />
       </motion.a>
       <motion.a
-        href="https://www.linkedin.com/in/ícaro-borges-805b3928a"
+        href="https://www.linkedin.com/in/icaroborgesdev"
         target="_blank"
         rel="noopener noreferrer"
         custom={1}
