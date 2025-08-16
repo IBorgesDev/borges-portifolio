@@ -55,7 +55,7 @@ export default function OrgsCarousel() {
   return (
     <motion.div 
       ref={ref}
-      className="w-full max-w-4xl mx-auto"
+      className="w-full max-w-4xl mx-auto px-4 sm:px-6"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -64,6 +64,7 @@ export default function OrgsCarousel() {
         opts={{
           align: "start",
           loop: true,
+          slidesToScroll: 1,
         }}
         plugins={[
           Autoplay({
@@ -72,11 +73,11 @@ export default function OrgsCarousel() {
         ]}
         className="w-full"
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
           {orgs.map((org, index) => (
-            <CarouselItem key={org.name} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+            <CarouselItem key={org.name} className="pl-1 sm:pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
               <motion.div 
-                className="flex flex-col items-center justify-center p-4 transition-colors"
+                className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 transition-colors"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ 
@@ -92,10 +93,10 @@ export default function OrgsCarousel() {
                 <img 
                   src={org.image} 
                   alt={org.name} 
-                  className="w-20 h-20 md:w-24 md:h-24 object-contain rounded-lg"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain rounded-lg"
                 />
-                <div className="flex flex-col justify-center items-center p-2 text-white text-center">
-                    <p className="text-sm font-medium">{org.name}</p>
+                <div className="flex flex-col justify-center items-center p-1 sm:p-2 text-white text-center">
+                    <p className="text-xs sm:text-sm font-medium">{org.name}</p>
                 </div>
               </motion.div>
             </CarouselItem>
