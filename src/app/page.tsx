@@ -20,6 +20,8 @@ import Modal from "./components/Modal";
 import ProjectCard from "./components/ProjectsSlider/ProjectCard";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import HeaderIcons from "./components/HeaderIcons";
+import { Carousel, CarouselItem } from "@/components/ui/carousel";
+import OrgsCarousel from "./components/OrgsCarousel";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -62,7 +64,14 @@ export default function Home() {
             sectionId="about-section"
           />
         </FadeIn>
+        <Section id="orgs-section" className="flex flex-col gap-8  px-8 md:px-0">
+          <GradientTitle>
+            Organizations I&apos;ve worked with
+          </GradientTitle>
+          <OrgsCarousel />
+        </Section>
       </main>
+  
       <ParallaxSection className="pt-48 px-0 md:px-16">
         <Section id="about-section" className="flex flex-col gap-48 items-center md:gap-0 md:flex-row justify-between px-8 md:px-0">
           <div className="flex flex-col gap-8">
